@@ -10,6 +10,7 @@ setup(
     install_requires=[
         'requests>=2.31.0'
     ],
+    url="https://github.com/movsdav/APIManager_DM_2024",
     long_description_content_type="text/markdown",
     long_description=description
 )

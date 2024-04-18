@@ -1,10 +1,11 @@
-<h2>Simple API Manipulator</h2>
+# Simple API Manager
 
-Main class is <i>APIManager</i> which have two methods: <br>
-request_get(<b>endpoint</b> <i>[, headers]</i>) <br>
-request_post(<b>endpoint</b> <i>[, data, headers]</i>)
+Main class is *APIManager* which have two methods:
 
-<h3>Usage</h3>
+- request_get(**endpoint** *[, headers]*)
+- request_post(**endpoint** *[, data, headers]*)
+
+## Usage
 ```python
 from api_manager import APIManager
 
