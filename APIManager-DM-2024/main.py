@@ -14,7 +14,7 @@ class APIManager:
         else:
             response_object.raise_for_status()
 
-    def request_post(self, endpoint, data, headers):
+    def request_post(self, endpoint, data, headers = None):
         url = f"{self.base_url}/{endpoint}"
 
         response_object = requests.post(url, json=data, headers=headers)
@@ -25,21 +25,16 @@ class APIManager:
 
 
 if __name__ == "__main__":
-    api_manager = APIManager("https://fakestoreapi.com")
-    response = api_manager.request_get("users")
+    manager = APIManager("https://jsonplaceholder.typicode.com")
+    response = manager.request_get("posts")
     response_json = response.json()
 
     # for item in response_json:
     #     print(item)
 
-    send_obj_status = api_manager.request_post("users", {
+    send_obj_status = manager.request_post("posts", {
         "name": "David",
         "age": 20,
     })
-
-    # send_obj_status = requests.post("https://fakestoreapi.com/users", json={
-    #     "name": "David",
-    #     "age": 20,
-    # })
 
     print(send_obj_status)
